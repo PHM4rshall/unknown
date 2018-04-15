@@ -1,0 +1,12 @@
+(sleep 5 && php /root/parser.php) &
+(sleep 10 && php /root/parser.php) &
+(sleep 15 && php /root/parser.php) &
+(sleep 20 && php /root/parser.php) &
+(sleep 25 && php /root/parser.php) &
+(sleep 30 && php /root/parser.php) &
+(sleep 35 && php /root/parser.php) &
+(sleep 40 && php /root/parser.php) &
+(sleep 45 && php /root/parser.php) &
+(sleep 50 && php /root/parser.php) &
+(sleep 55 && php /root/parser.php) &
+(sleep 60 && php /root/parser.php) &
