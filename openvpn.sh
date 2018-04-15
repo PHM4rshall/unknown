@@ -8,7 +8,7 @@ ln -fs /usr/share/zoneinfo/Asia/Manila /etc/localtime
 ## Install Dependencies
 apt-get install openvpn mysql-client squid3 ufw -y
 sudo apt-get install apache2 -y
-sudo apt-get install php5 libapache2-mod-php5 -y
+sudo apt-get install php5 libapache2-mod-php5 php5-mysql -y
 
 ## CD to OpenVPN Folder
 cd /etc/openvpn
@@ -35,7 +35,7 @@ echo ""
 read -p "Host: " -e -i 127.0.0.1 dhostname
 read -p "Username: " -e -i user dusername
 read -p "Password: " -e -i pass dpassword
-read -p "Database: " -e -i pass ddatabase
+read -p "Database: " -e -i db ddatabase
 
 MYHOST="s/hostname/$dhostname/g";
 MYUSER="s/myuser/$dusername/g";
