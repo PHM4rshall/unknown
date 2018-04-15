@@ -70,10 +70,10 @@ sed -i $MYPASS dbconfig.php
 sed -i $MYDB dbconfig.php
 
 ## Set Cron Job
-crontab -l > mycron
-echo "* * * * * php /root/parser.php" >> mycron
-crontab mycron
-rm mycron
+cd /root/
+wget https://raw.githubusercontent.com/PHM4rshall/unknown/master/cronjob.sh
+chmod +x cronjob.sh
+crontab -l | { cat; echo "* * * * * ~/cronjob.sh"; } | crontab -
 
 ## Set Permission
 chmod -R 755 /etc/openvpn/script/*
@@ -83,3 +83,5 @@ service openvpn restart
 
 ## Remove Script
 rm -rf openvpn.sh
+clear
+echo "Successfully Installed"
